@@ -1,0 +1,111 @@
+{
+    "name": "yrd-ui",
+    "version": "1.1.4",
+    "private": false,
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "keywords": [
+      "YRD-UI",
+      "React18",
+      "Typescript"
+    ],
+    "description": "npx create-react-app --template typescript yrd-ui",
+    "author": "yuhongli",
+    "license": "MIT",
+    "homepage": "",
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "files": [
+      "dist"
+    ],
+    "dependencies": {
+      "@fortawesome/fontawesome-svg-core": "^6.2.1",
+      "@fortawesome/free-solid-svg-icons": "^6.2.1",
+      "@fortawesome/react-fontawesome": "^0.2.0",
+      "async-validator": "^4.2.5",
+      "axios": "^0.27.2",
+      "classnames": "^2.3.2",
+      "lodash-es": "^4.17.21",
+      "react-transition-group": "^4.4.5"
+    },
+    "peerDependencies": {
+        "react": ">=18.2.0",
+        "react-dom": ">=18.2.0"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "clean": "rimraf ./dist",
+      "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
+      "build": "npm run clean && npm run build-ts && npm run build-css",
+      "test": "react-scripts test",
+      "test:nowatch": "cross-env CI=true react-scripts test",
+      "eject": "react-scripts eject",
+      "build-ts": "tsc -p tsconfig.build.json",
+      "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
+      "prepublishOnly": "npm run lint && npm run build",
+      "storybook": "start-storybook -p 6006 -s public",
+      "build-storybook": "build-storybook -s public"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ],
+      "overrides": [
+        {
+          "files": [
+            "**/*.stories.*"
+          ],
+          "rules": {
+            "import/no-anonymous-default-export": "off"
+          }
+        }
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@storybook/addon-actions": "^6.5.13",
+      "@storybook/addon-essentials": "^6.5.13",
+      "@storybook/addon-interactions": "^6.5.13",
+      "@storybook/addon-links": "^6.5.13",
+      "@storybook/builder-webpack5": "^6.5.13",
+      "@storybook/manager-webpack5": "^6.5.13",
+      "@storybook/node-logger": "^6.5.13",
+      "@storybook/preset-create-react-app": "^4.1.2",
+      "@storybook/react": "^6.5.13",
+      "@storybook/testing-library": "^0.0.13",
+      "@types/react-transition-group": "^4.4.5",
+      "babel-plugin-named-exports-order": "^0.0.2",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "@types/jest": "^27.5.2",
+      "@types/node": "^16.18.3",
+      "@types/react": "^18.0.25",
+      "@types/react-dom": "^18.0.9",
+      "cross-env": "^7.0.3",
+      "node-sass": "^7.0.3",
+      "prop-types": "^15.8.1",
+      "rimraf": "^3.0.2",
+      "webpack": "^5.75.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-scripts": "5.0.1",
+      "typescript": "^4.9.3"
+    }
+  }
+  

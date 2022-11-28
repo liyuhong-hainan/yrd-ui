@@ -1,6 +1,6 @@
 {
   "name": "yrd-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/indx.js",
   "module": "dist/index.js",
@@ -52,7 +52,7 @@
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build",
+    "prepublishOnly": "npm run lint && npm run build",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
