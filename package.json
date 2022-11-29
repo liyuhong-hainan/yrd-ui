@@ -13,10 +13,10 @@
   "description": "npx create-react-app --template typescript yrd-ui",
   "author": "yuhongli",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/liyuhong-hainan/yrd-ui",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/liyuhong-hainan/yrd-ui"
   },
   "files": [
     "dist"
