@@ -12,6 +12,8 @@ import 'yrd-ui/dist/index.css'
 // import component
 import { Button, Input, Menu, Icon } from 'yrd-ui'
 ~~~
+## API Docs
+https://liyuhong-hainan.github.io/yrd-ui/
 
 ## homePages
 https://www.yiren.com

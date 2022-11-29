@@ -2,8 +2,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import '../src/styles/index.scss';
 library.add(fas)
+import { themes } from '@storybook/theming';
 
 export const parameters = {
+  docs: {
+    theme: themes.light,
+  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -14,7 +18,7 @@ export const parameters = {
   viewMode: 'docs',
   options: {
     storySort: {
-      order: ['Welcome', '第四章：Button', '第四章作业：Alert 组件', '第六章：Menu', '第六章作业：Tabs', '第七章：Icon 组件', '第九章：Input', 'AutoComplete 组件', '第九章作业：Select', '第十章：Upload'], 
+      order: ['首页', '按钮 Button', '提示 Alert', '菜单 Menu', '标签页 Tabs', '图标 Icon', '输入框 Input', '自动补全 AutoComplete', '选择器 Select', '上传 Upload', '表单 Form'], 
     },
   }
 }

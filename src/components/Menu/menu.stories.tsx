@@ -6,7 +6,7 @@ import SubMenu from "./subMenu";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 const menuMeta: ComponentMeta<typeof Menu> = {
-    title: '第六章：Menu',
+    title: '菜单 Menu',
     id: 'Menu',
     component: Menu,
     subcomponents: {

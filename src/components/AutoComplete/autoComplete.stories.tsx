@@ -11,7 +11,7 @@ interface GithubUserProps {
   avatar_url: string;
 }
 export default { 
-  title: 'AutoComplete 组件',
+  title: '自动补全 AutoComplete',
   component: AutoComplete,
   id: 'AutoComplete',
   parameters: {

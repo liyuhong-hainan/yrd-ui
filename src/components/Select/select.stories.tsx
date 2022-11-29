@@ -4,7 +4,7 @@ import { ComponentMeta } from '@storybook/react'
 
 import Select from './index'
 export default {
-  title: '第九章作业：Select',
+  title: '选择器 Select',
   component: Select,
   id: 'Select',
   subcomponents: { 'Option': Select.Option },
