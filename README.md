@@ -15,5 +15,5 @@ import { Button, Input, Menu, Icon } from 'yrd-ui'
 ## API Docs
 https://liyuhong-hainan.github.io/yrd-ui/
 
-## homePages
+## Home Pages
 https://www.yiren.com

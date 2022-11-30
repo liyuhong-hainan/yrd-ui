@@ -1,14 +1,16 @@
 {
   "name": "yrd-ui",
-  "version": "1.0.0",
+  "version": "1.2.5",
   "private": false,
-  "main": "dist/indx.js",
-  "module": "dist/index.js",
-  "types": "dist/indx.d.ts",
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "YRD-UI",
     "React18",
-    "Typescript"
+    "Typescript",
+    "Rollup"
   ],
   "description": "npx create-react-app --template typescript yrd-ui",
   "author": "yuhongli",
@@ -20,6 +22,9 @@
   },
   "files": [
     "dist"
+  ],
+  "sideEffects": [
+    "dist/index.css"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -46,7 +51,7 @@
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
     "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
-    "build": "npm run clean && npm run build-ts && npm run build-css",
+    "build": "npm run clean && npm run build-es && npm run build-umd",
     "test": "react-scripts test",
     "test:nowatch": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
@@ -54,7 +59,9 @@
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "prepublishOnly": "npm run lint && npm run build",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "build-es": "rollup --config rollup/rollup.esm.config.mjs",
+    "build-umd": "rollup --config rollup/rollup.umd.config.mjs"
   },
   "eslintConfig": {
     "extends": [
@@ -85,6 +92,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@mdx-js/react": "^2.1.5",
+    "@rollup/plugin-commonjs": "^23.0.3",
+    "@rollup/plugin-json": "^5.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-replace": "^5.0.1",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
@@ -96,11 +109,20 @@
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
     "@types/react-transition-group": "^4.4.5",
+    "autoprefixer": "^10.4.13",
     "babel-plugin-named-exports-order": "^0.0.2",
     "cross-env": "^7.0.3",
     "node-sass": "^7.0.3",
+    "postcss": "^8.4.19",
     "prop-types": "^15.8.1",
     "rimraf": "^3.0.2",
+    "rollup": "^3.5.0",
+    "rollup-plugin-exclude-dependencies-from-bundle": "^1.1.23",
+    "rollup-plugin-sass": "^1.12.16",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
     "webpack": "^5.75.0"
   }
 }
