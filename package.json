@@ -110,6 +110,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/react-transition-group": "^4.4.5",
     "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "cross-env": "^7.0.3",
     "node-sass": "^7.0.3",
